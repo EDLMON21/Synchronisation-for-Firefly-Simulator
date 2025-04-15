@@ -1,48 +1,76 @@
+## 🔥 Project Overview – *Synchronization for Firefly Simulator*  
+### 🧠 Team Number: MON-21
 
-## Project Overview
+👥 **Team Members:**  
+- Mohammad Sami  
+- Shivam Panwar  
+- Gogineni Venkat Sumanth  
+- Juluva Yashwanth  
+- Lokesh  
 
-### Project Name: Synchronisation-for-Firefly-Simulator
-### Team Number: MON-21
-### Team Members:
-- Mohammad Sami
-- Shivam Panwar
-- Gogineni Venkat Sumanth 
-- Juluva Yashwanth
-- Lokesh
+---
 
-### Problem Statement and Solution:
+### 📌 Problem Statement & Solution
 
-Synchronization is a key phenomenon in complex systems. So to study it we need a programmable synchronization system with adjustable parameters to study real-time effects.
-Classical electronic fireflies (1993 design) lacked programmability and flexibility. Now, Modern advancements in microcontrollers enable digital control & experimentation.
+Synchronization is a fundamental phenomenon in complex systems 🌐. To study it in real-time with flexibility, we need a programmable system with tunable parameters.
 
-Initial Prototype: We first designed a basic STM32 board with just the microcontroller. This helped us gain hands-on experience with PCB design using the STM32G030K8T6.
+🧾 **Limitations of Old Designs:**  
+The classical 1993 electronic fireflies lacked programmability and flexibility.  
 
-Second Iteration: We integrated IR LEDs, photodiodes, and other components onto the board and fabricate 2-3 units. These was tested for functionality, synchronization accuracy, and any necessary design refinements.
+⚙️ **Modern Solution:**  
+Thanks to advancements in microcontrollers, we now have digital control and customizable experimentation possibilities.
 
-Final Prototype: After validating the second iteration, we manufactured 9 boards (to form a 3×3 matrix) for full-scale testing.
+---
 
-Throughout this process, software development and implementation ran in parallel, ensuring efficient debugging and integration.
-The choice of STM32G030X was recommended by our professor due to its suitability for the application. The IR LED and receiver pair was selected for its strong resistance to ambient light interference, ensuring reliable synchronization.
+### 🔧 Prototyping Journey
 
-### The choices of our components
+**🧩 Initial Prototype:**  
+We designed a basic STM32 board with just the microcontroller to gain hands-on experience with PCB design using **STM32G030K8T6**.
 
-STM32G030K8T6 - STM32G030 series was fixed by the porf. Then we chose this model since it was sufficient for our use case and due to ease of soldering and availability.
+**🔁 Second Iteration:**  
+Integrated IR LEDs, photodiodes, and supporting components onto the board. Fabricated 2-3 units to test functionality, sync accuracy & design refinements.
 
-IR LED and phototransistor pair - SFH 4550  SFH 309 FA. IR was used to avoid interference from visible and photodiode which had the max sensitivity at around 850nm (our ir led wavelength) and had a very small FOV.
+**✅ Final Prototype:**  
+After validation, we manufactured **9 boards (3×3 matrix)** for full-scale synchronization testing.
 
-Other components like transistor, LDO, micro USB connector were used which were available in WEL.
+💻 Throughout, software development and debugging ran parallel to hardware iterations for smooth integration.
 
+🧑‍🏫 The **STM32G030X** was suggested by our professor due to its suitability.  
+🔦 The IR LED & photodiode combo was chosen for ambient light resistance and reliability in synchronization.
 
-### Running the Application
+---
 
-1. **Microcontroller:** STM32G030K8T6 or STM32G030K6T6
-2. **Integrated Development Environment (IDE):** STM32CubeIDE
-3. **Steps for compiling and uploading the code to the device:**
-    - Install STM32CubeIDE
-    - Download the final.ioc file from STM32G030K8T6 folder in the src folder
-    - Load the .ioc file in your IDE
-    - Save the file to generate code
-    - Replace the code of generated main.c file with the code of main.c file inside STM32G030K8T6 folder in the src folder
-    - Click on the build icon to build the code
-    - Dump the code in the individual microcontrollers using StLink V2 (or similar)
-    - Synchronization process will start as soon as the phototransistors start detecting LED flashes
+### ⚙️ Component Choices
+
+- **🔲 STM32G030K8T6**  
+  → Chosen from STM32G030 series (as fixed by prof) due to sufficient specs, easy soldering & availability.
+
+- **🔦 IR LED & Phototransistor Pair**  
+  → *SFH 4550 & SFH 309 FA*  
+  → IR avoids visible light interference. The photodiode has peak sensitivity near **850nm** (matching our IR LED) and a narrow FOV for accurate detection.
+
+- **🧰 Other Components**  
+  → Transistors, LDO, micro USB connectors – sourced from WEL stock.
+
+---
+
+### 🚀 Running the Application
+
+1. **🎯 Microcontroller:**  
+   - STM32G030K8T6 or STM32G030K6T6  
+
+2. **🛠 IDE:**  
+   - STM32CubeIDE  
+
+3. **📥 Compilation & Upload Steps:**  
+   - Install **STM32CubeIDE**  
+   - Download the `final.ioc` file from the **STM32G030K8T6** folder inside `src`  
+   - Load `.ioc` file in your IDE  
+   - Save the file to auto-generate code  
+   - Replace the generated `main.c` with the `main.c` from the same folder  
+   - Build the project 🏗️  
+   - Flash the code using **StLink V2** (or equivalent)  
+   - 🎉 Synchronization begins once phototransistors start detecting LED flashes!
+
+---
+
