@@ -74,3 +74,7 @@ After validation, we manufactured **9 boards (3×3 matrix)** for full-scale sync
 
 ---
 
+Final Product
+![Alt text](others/Assembled.jpeg)
+
+
